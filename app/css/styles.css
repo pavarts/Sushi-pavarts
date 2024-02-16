@@ -126,6 +126,44 @@ blockquote::before {
   color: #600;
 }
 
+.popover {
+  padding: 1rem;
+  width: 300px;
+  height: 225px;
+  background: #fff;
+  border: 2px solid #600;
+  border-radius: 4px;
+  position: fixed;
+  top: calc(50% - 100px); /*half of the screen size - 100px*/ /*without the -100px and -150px, the upper left hand is centered. The coordinate system in a browser is always top left hand corner*/
+  left: calc(50% - 150px);
+  /* display: none; if you're designing and playing with the css you want to have this in here if it's something that you don't want to show up all the time */
+}
+
+.showme .popover{
+  display: block;
+}
+
+.showme main{
+  filter: blur(4px) grayscale(100%) opacity(50%);
+}
+
+.popover .closer {
+  position: absolute;
+  top: -11px;
+  right: -14px;
+  color: #600;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 0.25rem;
+  border: 2px solid #600;
+  border-radius: 50%; /*how to convert a perfect square to a perfect circle*/
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
 @media (max-width: 800px) {
   .nav {
     position: fixed;
